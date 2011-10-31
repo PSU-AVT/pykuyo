@@ -1,9 +1,5 @@
 import serial
 import struct
-import math
-import time
-
-import matplotlib.pyplot as plt
 
 class Urg_04lx(object):
 	def open(self, path):
@@ -64,6 +60,10 @@ class Urg_04lx(object):
 		return resp
 
 if __name__=='__main__':
+	import matplotlib.pyplot as plt
+	import math
+	import time
+
 	s = Urg_04lx()
 	s.open('/dev/ttyACM0')
 	plt.ion()
